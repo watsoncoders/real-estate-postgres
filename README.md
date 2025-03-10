@@ -1,4 +1,3 @@
-Below is a **single-file** `README.md` that uses **GitHub-flavored Markdown** properly, based on your provided content. You can copy and paste it directly into your repository as one file.
 
 ```markdown
 # Custom Real Estate PostgreSQL Plugin
