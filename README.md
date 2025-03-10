@@ -79,25 +79,28 @@ This plugin creates and manages real estate listings **outside** of the typical 
    sudo apt-get install postgresql postgresql-contrib
 2. Switch to the postgres user:
     ```bash
-sudo -i -u postgres
+    sudo -i -u postgres
 4. Create a database and user:
- ```bash
- CREATE DATABASE my_real_estate_db;
-CREATE USER my_pg_user WITH PASSWORD 'my_pg_password';
-GRANT ALL PRIVILEGES ON DATABASE my_real_estate_db TO my_pg_user;
+   ```bash
+   CREATE DATABASE my_real_estate_db;
+  CREATE USER my_pg_user WITH PASSWORD 'my_pg_password';
+  GRANT ALL PRIVILEGES ON DATABASE my_real_estate_db TO my_pg_user;
 5. (Optional) Enable PostGIS:
  ```bash
-\c my_real_estate_db
-CREATE EXTENSION postgis;
-Redis Setup
+ \c my_real_estate_db
+ CREATE EXTENSION postgis;
+ Redis Setup
 1. Install Redis:
+
  ```bash
 sudo apt-get update
 sudo apt-get install redis-server
+
 2. Enable & start:
  ```bash
 sudo systemctl enable redis-server
 sudo systemctl start redis-server
+
 3. In the plugin set:
  ```bash
 define('CREP_REDIS_HOST', '127.0.0.1');
