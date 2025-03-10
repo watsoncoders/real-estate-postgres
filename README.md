@@ -105,8 +105,16 @@ sudo systemctl start redis-server
  ```bash
 define('CREP_REDIS_HOST', '127.0.0.1');
 define('CREP_REDIS_PORT', 6379);
-
-
+AWS S3 Setup (Optional)
+Create an S3 bucket in your AWS console.
+Get Access Key & Secret Key.
+In the main plugin file, set: 
+---bash
+define('CREP_S3_BUCKET', 'your-bucket');
+define('CREP_S3_REGION', 'us-east-1');
+define('CREP_S3_KEY', 'YOUR_AWS_KEY');
+define('CREP_S3_SECRET', 'YOUR_AWS_SECRET');
+4. Adjust the image-uploads.php logic to use the official AWS SDK or a 3rd-party library for real usage.
 
 
    
